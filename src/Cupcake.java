@@ -1,28 +1,25 @@
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 
 public class Cupcake {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
-        int[] calories = new int[n];
+        int[] a = new int[n];
 
         for (int i = 0; i < n; i++) {
-            calories[i] = sc.nextInt();
+            a[i] = sc.nextInt();
         }
-        sc.close();
 
-        Arrays.sort(calories);
+        Arrays.sort(a);
 
-        long miles = 0;
-        int power = 1;
+        long sum = 0;
+        int j = 0;
 
         for (int i = n - 1; i >= 0; i--) {
-            miles += (long) calories[i] * (1L << power);
-            power++;
+            sum += (long) a[i] * (1L << j);
+            j++;
         }
 
-        System.out.println(miles);
+        System.out.println(sum);
     }
 }
