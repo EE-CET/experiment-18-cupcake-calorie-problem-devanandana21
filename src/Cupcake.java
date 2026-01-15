@@ -16,7 +16,7 @@ public class Cupcake {
         Arrays.sort(calories);
 
         long miles = 0;
-        int power = 0;
+        int power = 1;
 
         for (int i = n - 1; i >= 0; i--) {
             miles += (long) calories[i] * (1L << power);
