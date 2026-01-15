@@ -20,6 +20,6 @@ public class Cupcake {
             j++;
         }
 
-        System.out.println(sum);
+        System.out.print(sum);
     }
 }
