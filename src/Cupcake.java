@@ -4,22 +4,22 @@ public class Cupcake {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] a = new int[n];
+        int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
+            arr[i] = sc.nextInt();
         }
 
-        Arrays.sort(a);
+        Arrays.sort(arr);
 
-        long sum = 0;
-        int j = 0;
+        long result = 0;
+        int power = 0;
 
         for (int i = n - 1; i >= 0; i--) {
-            sum += (long) a[i] * (1L << j);
-            j++;
+            result += (long) arr[i] * (1L << power);
+            power++;
         }
 
-        System.out.print(sum);
+        System.out.print(result);
     }
 }
